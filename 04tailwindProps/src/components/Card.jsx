@@ -1,7 +1,7 @@
 import React from "react";
 
-function Card(props) {
-    console.log(props)
+function Card({data: {name, desc}}) {
+    // console.log(props)
     return (
         <>
                <div className="max-w-xs rounded-lg shadow-md bg-black mt-3 text-gray-100">
@@ -12,9 +12,9 @@ function Card(props) {
         />
         <div className="flex flex-col justify-between p-6 space-y-8">
           <div className="space-y-2">
-            <h2 className="text-3xl font-semibold tracking-wide">{props.data.name}</h2>
+            <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
             <p className="text-gray-400">
-              {props.data.desc}
+              {desc}
             </p>
           </div>
           <button
